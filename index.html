@@ -1,12 +1,46 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-    <title>My CV</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Electric Shop Management</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <h1>Safdar's CV</h1>
-    <p>Welcome to my CV website.</p>
+
+    <div class="container">
+        <h1>⚡ Electric Shop Management System</h1>
+
+        <div class="form">
+            <input type="text" id="name" placeholder="Product Name">
+            <input type="number" id="price" placeholder="Price">
+            <button onclick="addProduct()">Add Product</button>
+        </div>
+
+        <h2>📦 Product List</h2>
+        <ul id="list"></ul>
+
+        <hr>
+
+        <h2>🧾 Invoice / Bill</h2>
+        <ul id="bill"></ul>
+
+        <h3>Total: Rs <span id="total">0</span></h3>
+
+        <button onclick="clearBill()">Clear Bill</button>
+        <button onclick="downloadInvoice()">Download PDF Invoice</button>
+
+    </div>
+
+    <script src="https://www.gstatic.com/firebasejs/10.12.2/firebase-app-compat.js"></script>
+<script src="https://www.gstatic.com/firebasejs/10.12.2/firebase-database-compat.js"></script>
+
+<!-- jsPDF -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+
+<!-- YOUR SCRIPT LAST -->
+<script src="script.js"></script>
+
 </body>
 </html>
 
